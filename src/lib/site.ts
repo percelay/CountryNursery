@@ -106,11 +106,6 @@ export const HERO_IMAGES: Record<SectionSlug, string[]> = {
 };
 
 export const PAGE_GALLERIES: Partial<Record<SectionSlug, string[]>> = {
-  testimonials: [
-    "/images/Seasonal_decor-_0.jpg",
-    "/images/Seasonal_decor-_19.jpg",
-    "/images/Seasonal_decor-_21.jpg",
-  ],
   "garden-center": [
     "/images/garden-accents.jpg",
     "/images/gifts garden accents.jpg",
