@@ -1,10 +1,10 @@
 import { ArrowRight, PhoneCall } from "lucide-react";
+import Image from "next/image";
 import type { ReactNode } from "react";
 
 import { Button } from "@/components/Button";
 import { ContentRenderer } from "@/components/ContentRenderer";
 import { ImageGallery } from "@/components/ImageGallery";
-import { ImageMosaic } from "@/components/ImageMosaic";
 import { splitSectionBlocks, type SectionData } from "@/lib/content";
 import { PHONE_DISPLAY, PHONE_LINK } from "@/lib/site";
 
@@ -64,7 +64,16 @@ export function SectionPage({
           </div>
         </div>
 
-        <ImageMosaic images={heroImages} />
+        <figure className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-surface ring-1 ring-primary/[0.06] shadow-[0_2px_8px_rgb(26_122_76_/_0.06),0_12px_32px_-8px_rgb(26_122_76_/_0.08)] sm:aspect-[4/5] lg:aspect-[3/4]">
+          <Image
+            src={heroImages[0]}
+            alt=""
+            fill
+            priority
+            sizes="(min-width: 1024px) 42vw, (min-width: 768px) 50vw, 100vw"
+            className="object-cover"
+          />
+        </figure>
       </section>
 
       {/* Content */}

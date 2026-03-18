@@ -1,9 +1,10 @@
 import { ArrowRight, Clock3, Mail, MapPin, PhoneCall } from "lucide-react";
 
+import Image from "next/image";
+
 import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
 import { ContentRenderer } from "@/components/ContentRenderer";
-import { ImageMosaic } from "@/components/ImageMosaic";
 import { getSection, getSiteMeta, splitSectionBlocks } from "@/lib/content";
 import { HERO_IMAGES } from "@/lib/site";
 
@@ -72,7 +73,16 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <ImageMosaic images={HERO_IMAGES.contact} />
+        <figure className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-surface ring-1 ring-primary/[0.06] shadow-[0_2px_8px_rgb(26_122_76_/_0.06),0_12px_32px_-8px_rgb(26_122_76_/_0.08)] sm:aspect-[4/5] lg:aspect-[3/4]">
+          <Image
+            src={HERO_IMAGES.contact[0]}
+            alt=""
+            fill
+            priority
+            sizes="(min-width: 1024px) 42vw, (min-width: 768px) 50vw, 100vw"
+            className="object-cover"
+          />
+        </figure>
       </section>
 
       {/* Contact cards */}
