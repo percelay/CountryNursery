@@ -70,7 +70,7 @@ function renderInlineMarkdown(text: string, keyPrefix: string) {
         <a
           key={`${keyPrefix}-link-${match.index}`}
           href={href}
-          className="inline-flex items-center gap-1 font-medium text-primary transition duration-300 hover:text-text-main"
+          className="inline-flex items-center gap-1 font-medium text-primary transition duration-300 hover:text-primary-dark"
         >
           <span>{label}</span>
           <ArrowUpRight className="h-4 w-4" />
@@ -79,7 +79,7 @@ function renderInlineMarkdown(text: string, keyPrefix: string) {
         <Link
           key={`${keyPrefix}-link-${match.index}`}
           href={href}
-          className="inline-flex items-center gap-1 font-medium text-primary transition duration-300 hover:text-text-main"
+          className="inline-flex items-center gap-1 font-medium text-primary transition duration-300 hover:text-primary-dark"
         >
           <span>{label}</span>
           <ArrowUpRight className="h-4 w-4" />
@@ -140,7 +140,7 @@ function ListContent({
   return (
     <ListTag
       className={cn(
-        "space-y-3 pl-6 text-base leading-7 text-text-muted",
+        "space-y-3 pl-6 text-base leading-7 text-text-muted marker:text-primary",
         ordered ? "list-decimal" : "list-disc",
       )}
     >
@@ -169,7 +169,7 @@ export function ContentRenderer({
           return (
             <Tag
               key={`${block.text}-${index}`}
-              className="max-w-3xl text-2xl font-semibold tracking-[-0.03em] text-text-main sm:text-3xl"
+              className="max-w-3xl text-2xl font-bold tracking-[-0.03em] text-text-main sm:text-3xl"
             >
               {renderInlineMarkdown(block.text, `heading-${index}`)}
             </Tag>
@@ -221,4 +221,3 @@ export function ContentRenderer({
     </div>
   );
 }
-

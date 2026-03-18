@@ -11,7 +11,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-24 border-t border-black/10 bg-white">
+    <footer className="mt-24 border-t border-primary/10 bg-gradient-to-b from-surface to-white">
       <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-10">
         <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr_1fr]">
           <div className="space-y-6">
@@ -78,7 +78,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-black/10 pt-6 text-sm text-text-muted md:flex-row md:items-center md:justify-between">
+        <div className="divider-gradient mt-12" />
+
+        <div className="flex flex-col gap-4 pt-6 text-sm text-text-muted md:flex-row md:items-center md:justify-between">
           <p>
             &copy; {year}
             {meta.businessName ? ` ${meta.businessName}` : ""}

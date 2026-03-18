@@ -17,10 +17,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" className={inter.variable}>
       <body className="bg-bg text-text-main antialiased">
         <Header />
-        <div className="min-h-screen pt-28">{children}</div>
+        <div className="min-h-screen pt-32">{children}</div>
         <Footer />
       </body>
     </html>
   );
 }
-

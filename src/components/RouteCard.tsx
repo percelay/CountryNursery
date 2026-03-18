@@ -16,7 +16,7 @@ export function RouteCard({ href, image, label, className }: RouteCardProps) {
     <Link
       href={href}
       className={cn(
-        "group overflow-hidden rounded-2xl border border-black/5 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md",
+        "group overflow-hidden rounded-2xl border border-primary/[0.06] bg-white shadow-[0_1px_3px_rgb(26_122_76_/_0.06),0_8px_24px_-8px_rgb(26_122_76_/_0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_2px_8px_rgb(26_122_76_/_0.08),0_16px_40px_-8px_rgb(26_122_76_/_0.1)]",
         className,
       )}
     >
@@ -26,7 +26,7 @@ export function RouteCard({ href, image, label, className }: RouteCardProps) {
           alt=""
           fill
           sizes="(min-width: 1280px) 22vw, (min-width: 768px) 48vw, 100vw"
-          className="object-cover transition duration-500 group-hover:scale-[1.03]"
+          className="object-cover transition duration-700 ease-out group-hover:scale-[1.04]"
         />
       </div>
       <div className="flex items-center justify-between gap-4 px-5 py-4">

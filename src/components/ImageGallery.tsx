@@ -22,12 +22,13 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
   }
 
   return (
-    <div className={cn("grid gap-4 md:grid-cols-3", className)}>
+    <div className={cn("grid gap-3 md:grid-cols-3", className)}>
       {images.map((src, index) => (
         <figure
           key={`${src}-${index}`}
           className={cn(
-            "group relative overflow-hidden rounded-2xl bg-surface shadow-md",
+            "group relative overflow-hidden rounded-2xl bg-surface ring-1 ring-primary/[0.06]",
+            "shadow-[0_2px_8px_rgb(26_122_76_/_0.06),0_12px_32px_-8px_rgb(26_122_76_/_0.08)]",
             GALLERY_LAYOUT_CLASSES[index % GALLERY_LAYOUT_CLASSES.length],
           )}
         >
@@ -36,11 +37,10 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
             alt=""
             fill
             sizes="(min-width: 1024px) 28vw, (min-width: 768px) 33vw, 100vw"
-            className="object-cover transition duration-500 group-hover:scale-[1.03]"
+            className="object-cover transition duration-700 ease-out group-hover:scale-[1.04]"
           />
         </figure>
       ))}
     </div>
   );
 }
-
